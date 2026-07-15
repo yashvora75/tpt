@@ -73,12 +73,18 @@
     P('Dubai Musk', { oud: true }), P('Lacoste 12.12', { house: 'Lacoste' })
   ];
 
-  const emojiFor = (p) => p.oud ? '🪔' : p.f ? '🌸' : '🫙';
+  /* Elegant monoline glyphs (matching the site's icon language) instead of
+     emoji — oud gets a flame, "for her" gets a minimal blossom, everything
+     else gets a perfume bottle silhouette. */
+  const ICON_OUD = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2.3c-.9 2.6-3.4 4-3.4 7.2a3.4 3.4 0 0 0 6.8 0c0-1.3-.4-2.2-1.1-2.9.3 1.3-.2 2-.9 2-.9 0-.9-.9-.9-1.8 0-1.7-1.3-3-.5-4.5Z"/><path d="M8.4 14.2a5.6 5.6 0 0 0 7.2 0"/><path d="M7 17.4a7.5 7.5 0 0 0 10 0"/></svg>';
+  const ICON_HER  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="1.5"/><path d="M12 10.3c-1.6-1.9-1.6-4.3 0-5.8 1.6 1.5 1.6 3.9 0 5.8ZM12 13.7c1.6 1.9 1.6 4.3 0 5.8-1.6-1.5-1.6-3.9 0-5.8ZM10.3 12c-1.9-1.6-4.3-1.6-5.8 0 1.5 1.6 3.9 1.6 5.8 0ZM13.7 12c1.9-1.6 4.3-1.6 5.8 0-1.5 1.6-3.9 1.6-5.8 0Z"/></svg>';
+  const ICON_BASE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10.5 2h3M11 2v2.6M13 2v2.6M9 6.6h6l1.2 2.3V19a2 2 0 0 1-2 2h-5.4a2 2 0 0 1-2-2V8.9L9 6.6Z"/><path d="M8.3 11.5h7.4"/></svg>';
+  const iconFor = (p) => p.oud ? ICON_OUD : p.f ? ICON_HER : ICON_BASE;
 
   const render = (items) => {
     grid.innerHTML = items.map(p => `
       <article class="lib-card${p.f ? ' is-her' : ''}" data-her="${p.f}" data-oud="${p.oud}">
-        <span class="lib-ic">${emojiFor(p)}</span>
+        <span class="lib-ic">${iconFor(p)}</span>
         <div class="lib-meta">
           ${p.house ? `<span class="lib-house">${p.house}</span>` : `<span class="lib-house">House Signature</span>`}
           <h3>${p.name}</h3>
