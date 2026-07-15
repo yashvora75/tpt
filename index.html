@@ -7,7 +7,7 @@
   <meta name="description" content="The Perfume Tailor brings you the world's most iconic fragrances, tailored to your taste in 30ml and 120ml." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="assets/css/style.css?v=20260722" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260723" />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
@@ -48,29 +48,27 @@
     <div class="hero-orb hero-orb-3"></div>
     <div class="hero-sparks" id="hero-sparks"></div>
 
-    <!-- Full-bleed image layer -->
+    <!-- Full-bleed image layer (slightly blurred behind the copy) -->
     <div class="hero-visual" aria-hidden="true">
       <img src="assets/img/tpt-wide.png" class="hero-wide" alt="The Perfume Tailor signature fragrances" />
     </div>
 
-    <!-- Buttons: centered on hero, slightly below middle -->
-    <div class="hero-cta-overlay" data-reveal data-delay="3">
-      <a href="https://api.whatsapp.com/send/?phone=919619733733&text=Hi%20!%20I%27m%20looking%20to%20order%20a%20new%20perfume.&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-gold">Order fragrances <span class="arw">→</span></a>
-      <a href="collections.html" class="btn btn-ghost">View collections</a>
+    <!-- Copy + buttons: centered on the hero image -->
+    <div class="hero-overlay">
+      <div class="hero-overlay-copy">
+        <span class="eyebrow" data-reveal>Luxury Perfumery</span>
+        <h1 class="display" data-reveal data-delay="1">A fragrance <span class="gold-text">tailored</span><br>to your taste.</h1>
+        <p class="lead" data-reveal data-delay="2">The Perfume Tailor brings you the world's most iconic fragrances, reimagined by our house as <strong>Pure Parfum at 40% oil concentration</strong> for depth that lasts all day. Available in 30ml and 120ml.</p>
+      </div>
+      <div class="hero-cta-overlay" data-reveal data-delay="3">
+        <a href="https://api.whatsapp.com/send/?phone=919619733733&text=Hi%20!%20I%27m%20looking%20to%20order%20a%20new%20perfume.&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-gold">Order fragrances <span class="arw">→</span></a>
+        <a href="collections.html" class="btn btn-ghost">View collections</a>
+      </div>
     </div>
 
     <!-- Scroll hint -->
     <div class="hero-scroll-hint" aria-hidden="true">↓</div>
   </header>
-
-  <!-- ============ HERO COPY (below fold, desktop) ============ -->
-  <section class="hero-below-fold">
-    <div class="wrap">
-      <span class="eyebrow" data-reveal>Luxury Perfumery</span>
-      <h1 class="display" data-reveal data-delay="1">A fragrance <span class="gold-text">tailored</span><br>to your taste.</h1>
-      <p class="lead" data-reveal data-delay="2">The Perfume Tailor brings you the world's most iconic fragrances, reimagined by our house as <strong>Pure Parfum at 40% oil concentration</strong> for depth that lasts all day. Available in 30ml and 120ml.</p>
-    </div>
-  </section>
 
   <!-- ============ MARQUEE ============ -->
   <div class="marquee" aria-hidden="true">
@@ -316,7 +314,7 @@
   })();
   </script>
   <script src="assets/js/reviews.js"></script>
-  <script src="assets/js/main.js?v=20260722"></script>
+  <script src="assets/js/main.js?v=20260723"></script>
   <script src="assets/js/wa-float.js"></script>
   <script>
   /* ---- Intro video: only on fresh load, skip on internal nav / back ---- */
