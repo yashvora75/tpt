@@ -417,7 +417,7 @@ strong { font-weight: 500; color: var(--gold-lite); }
   width: 100vw;
   height: 100vh;      /* fallback */
   height: 100dvh;     /* fills to true bottom on mobile — no gap */
-  background: #0a1120;
+  background: #374559;
   overflow: hidden;
   pointer-events: all;
   opacity: 1;
@@ -433,7 +433,7 @@ strong { font-weight: 500; color: var(--gold-lite); }
   object-fit: contain;
   object-position: center center;
   display: block;
-  background: #0a1120;
+  background: #374559;
 }
 
 /* Phones & sub-tablet (portrait): fill the screen edge-to-edge, no bars */
