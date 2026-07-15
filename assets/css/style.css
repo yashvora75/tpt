@@ -388,10 +388,26 @@ strong { font-weight: 500; color: var(--gold-lite); }
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
+  min-width: 100%; min-height: 100%;
   object-fit: cover;          /* fills the whole screen, no letterbox gap */
   object-position: center top; /* keep the top of the video anchored */
   display: block;
   background: #0a1120;
+}
+
+/* Intro fills every screen size — phones & sub-tablet included */
+@media (max-width: 1024px) {
+  #site-intro {
+    width: 100vw;
+    height: 100vh;   /* fallback */
+    height: 100svh;  /* small viewport unit — safe when mobile UI is showing */
+    height: 100dvh;  /* dynamic — fills to the true bottom, no gap */
+  }
+  .intro-video {
+    width: 100%; height: 100%;
+    min-width: 100%; min-height: 100%;
+    object-fit: cover; object-position: center center;
+  }
 }
 
 /* Nav always visible — no scroll-reveal hiding */
