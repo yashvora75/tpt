@@ -401,14 +401,15 @@ strong { font-weight: 500; color: var(--gold-lite); }
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  min-width: 100%; min-height: 100%;
-  object-fit: cover;          /* fills the whole screen, no letterbox gap */
-  object-position: center top; /* keep the top of the video anchored */
+  /* Big / landscape screens: show the WHOLE portrait video centred, with the
+     brand navy filling the sides (letterbox) — no cropping, no zoom. */
+  object-fit: contain;
+  object-position: center center;
   display: block;
   background: #0a1120;
 }
 
-/* Intro fills every screen size — phones & sub-tablet included */
+/* Phones & sub-tablet (portrait): fill the screen edge-to-edge, no bars */
 @media (max-width: 1024px) {
   #site-intro {
     width: 100vw;
@@ -419,7 +420,8 @@ strong { font-weight: 500; color: var(--gold-lite); }
   .intro-video {
     width: 100%; height: 100%;
     min-width: 100%; min-height: 100%;
-    object-fit: cover; object-position: center center;
+    object-fit: cover;           /* fill the phone screen completely */
+    object-position: center center;
   }
 }
 
