@@ -721,6 +721,13 @@ strong { font-weight: 500; color: var(--gold-lite); }
 }
 .art-panel .glow { position:absolute; width: 60%; aspect-ratio:1; border-radius:50%; background: var(--grad-gold); filter: blur(70px); opacity:.28; }
 .art-panel .flask { font-size: 12rem; filter: drop-shadow(0 30px 60px rgba(0,0,0,.5)); animation: bob 6s var(--ease) infinite; }
+.art-panel .bottle-img {
+  position: relative; z-index: 1;
+  width: 62%; max-width: 280px; height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,.55));
+  animation: bob 6s var(--ease) infinite;
+}
 @keyframes bob { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-18px) rotate(3deg)} }
 
 /* ==========================================================================
