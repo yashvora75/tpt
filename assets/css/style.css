@@ -415,33 +415,25 @@ strong { font-weight: 500; color: var(--gold-lite); }
   transition: opacity 0.7s ease;
 }
 #site-intro.intro-exit { opacity: 0; pointer-events: none; }
+/* Desktop / landscape: the video is sized to its own (portrait) width and
+   centred, so its actual left & right edges can be feathered with a mask that
+   dissolves them straight into the two-tone background gradient — no seam. */
 .intro-video {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  height: 100%; width: auto;
+  max-width: 100%;
   z-index: 1;
-  /* Big / landscape screens: show the WHOLE portrait video centred, with the
-     two-tone gradient filling the sides — no cropping, no zoom. */
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   display: block;
   background: transparent;      /* let the parent gradient show through */
-}
-/* Blend the two side colours softly onto the video edges so there is no
-   hard letterbox seam — dark left fades in, lighter right fades in. */
-#site-intro::after {
-  content: "";
-  position: absolute; inset: 0; z-index: 2; pointer-events: none;
-  background: linear-gradient(
-    to right,
-    #101920 0%,
-    rgba(16, 25, 32, 0) 28%,
-    rgba(34, 44, 62, 0) 72%,
-    #222c3e 100%
-  );
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
 }
 
-/* Phones & sub-tablet (portrait): fill the screen edge-to-edge, no bars */
+/* Phones & sub-tablet (portrait): fill the screen edge-to-edge, no mask */
 @media (max-width: 1024px) {
   #site-intro {
     width: 100vw;
@@ -450,20 +442,13 @@ strong { font-weight: 500; color: var(--gold-lite); }
     height: 100dvh;  /* dynamic — fills to the true bottom, no gap */
   }
   .intro-video {
+    left: 0; transform: none;
     width: 100%; height: 100%;
     min-width: 100%; min-height: 100%;
     object-fit: cover;           /* fill the phone screen completely */
     object-position: center center;
-  }
-  /* Video fills edge-to-edge here, so keep the side blend subtle */
-  #site-intro::after {
-    background: linear-gradient(
-      to right,
-      #101920 0%,
-      rgba(16, 25, 32, 0) 16%,
-      rgba(34, 44, 62, 0) 84%,
-      #222c3e 100%
-    );
+    -webkit-mask-image: none;
+            mask-image: none;
   }
 }
 
