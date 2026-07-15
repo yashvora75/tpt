@@ -75,8 +75,15 @@
     next.disabled = index >= pages() - 1;
   }
 
-  prev.addEventListener('click', () => go(index - 1));
-  next.addEventListener('click', () => go(index + 1));
+  function goWrap(i) {
+    // wrap around instead of clamping, for a seamless auto-loop
+    const total = pages();
+    index = (i + total) % total;
+    go(index);
+  }
+
+  prev.addEventListener('click', () => { goWrap(index - 1); restartAutoplay(); });
+  next.addEventListener('click', () => { goWrap(index + 1); restartAutoplay(); });
 
   let rz;
   window.addEventListener('resize', () => {
@@ -84,6 +91,24 @@
     rz = setTimeout(() => { build_dots(); go(Math.min(index, pages() - 1)); }, 150);
   });
 
+  /* ---- Autoplay ---- */
+  const AUTOPLAY_MS = 4500;
+  let autoplayTimer = null;
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(() => goWrap(index + 1), AUTOPLAY_MS);
+  }
+  function stopAutoplay() {
+    if (autoplayTimer) clearInterval(autoplayTimer);
+    autoplayTimer = null;
+  }
+  function restartAutoplay() { startAutoplay(); }
+
+  viewport.addEventListener('mouseenter', stopAutoplay);
+  viewport.addEventListener('mouseleave', startAutoplay);
+
   build_dots();
   go(0);
+  startAutoplay();
 })();
