@@ -3,8 +3,11 @@
    Design system: deep midnight navy + champagne gold, editorial serif
    ========================================================================== */
 
-/* ---- Fonts ---- */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
+/* ---- Fonts ----
+   Italiana: the thin, elongated Didot-style display face used across luxury
+   fashion/perfume branding (Chanel, Dior, YSL). Paired with Jost, a clean
+   geometric sans, for body copy. ---- */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500;600&display=swap');
 
 /* ---- Tokens ---- */
 :root {
@@ -24,7 +27,7 @@
   --grad-gold:  linear-gradient(135deg, #f4d7a8 0%, #e6bd83 38%, #c8975a 100%);
   --grad-ink:   radial-gradient(120% 120% at 50% 0%, #16274470 0%, transparent 60%);
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Italiana', Georgia, serif;
   --font-body:    'Jost', system-ui, sans-serif;
 
   --maxw: 1240px;
@@ -74,7 +77,7 @@ section { position: relative; }
   display: inline-flex; align-items: center; gap: 0.9em;
 }
 .eyebrow::before { content: ""; width: 2.4em; height: 1px; background: var(--grad-gold); }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.1; letter-spacing: 0.01em; }
 .display { font-size: clamp(2.4rem, 7vw, 6.2rem); }
 h2 { font-size: clamp(1.75rem, 4.6vw, 3.8rem); }
 .lead { font-size: clamp(0.98rem, 2vw, 1.18rem); color: var(--cream-dim); max-width: 52ch; font-weight: 300; line-height: 1.7; }
@@ -647,7 +650,7 @@ strong { font-weight: 500; color: var(--gold-lite); }
 }
 .info-row:hover .ic { transform: rotate(-8deg) scale(1.06); border-color: var(--gold); box-shadow: 0 0 22px rgba(230,189,131,0.22); }
 .info-row .k { font-size: 0.66rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
-.info-row .v { font-size: 1.08rem; color: var(--cream); font-family: var(--font-display); font-weight: 500; letter-spacing: 0.01em; }
+.info-row .v { font-size: 1.08rem; color: var(--cream); font-family: var(--font-display); font-weight: 400; letter-spacing: 0.01em; }
 .info-row .v a { position: relative; transition: color .3s; }
 .info-row .v a:hover { color: var(--gold); }
 
@@ -901,9 +904,9 @@ strong { font-weight: 500; color: var(--gold-lite); }
   justify-content: space-between;
   gap: 1.5rem;
   padding: 1.5rem 0;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.2vw, 1.32rem);
+  font-weight: 400;
   color: var(--cream);
   text-align: left;
   letter-spacing: 0.01em;
