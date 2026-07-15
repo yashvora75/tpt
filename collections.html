@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collections — The Perfume Tailor</title>
+  <meta name="description" content="Explore The Perfume Tailor's library of the world's most iconic fragrances, reimagined and tailored to your taste. Available in 30ml and 120ml." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html" aria-label="The Perfume Tailor home">
+      <img src="assets/img/tpt-mark.png" alt="The Perfume Tailor logo" onerror="this.style.display='none'" />
+      <span class="brand-name">The Perfume Tailor</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="collections.html" class="active">Collections</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://api.whatsapp.com/send/?phone=919619733733&text=Hi%20!%20I%27m%20looking%20to%20order%20a%20new%20perfume.&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="nav-overlay-cta">Order Now</a>
+    </div>
+    <a href="https://api.whatsapp.com/send/?phone=919619733733&text=Hi%20!%20I%27m%20looking%20to%20order%20a%20new%20perfume.&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-gold nav-cta">Order Now</a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow" data-reveal style="justify-content:center;display:inline-flex">The Library</span>
+        <h1 class="display" data-reveal data-delay="1">The world's icons, <span class="gold-text">tailored to you.</span></h1>
+        <p class="lead" data-reveal data-delay="2">A curated wardrobe of the most loved fragrances on earth — reimagined by our house as <em>Pure Parfum at 40% oil concentration</em> and matched to your taste. Every scent available in <em>30ml</em> and <em>120ml</em>.</p>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Designer</span><span>Niche</span><span>Arabian Oud</span><span>For Her</span><span>For Him</span>
+        <span>Designer</span><span>Niche</span><span>Arabian Oud</span><span>For Her</span><span>For Him</span>
+      </div>
+    </div>
+
+    <section class="section-pad" style="padding-top:clamp(3rem,7vw,5rem)">
+      <div class="wrap">
+        <div class="lib-controls" data-reveal>
+          <div class="lib-filters">
+            <button class="lib-filter active" data-filter="all">All</button>
+            <button class="lib-filter" data-filter="her">For Her</button>
+            <button class="lib-filter" data-filter="him">For Him &amp; Unisex</button>
+            <button class="lib-filter" data-filter="oud">Oud &amp; Oriental</button>
+          </div>
+          <input id="lib-search" class="lib-search" type="search" placeholder="Search a scent or house…" aria-label="Search fragrances" />
+        </div>
+        <p class="lib-note" data-reveal><b><span id="lib-count">0</span></b> fragrances · every scent is a <b>Pure Parfum at 40% oil concentration</b> · scents marked <b style="color:#e79ab0">For Her</b> are designed with women in mind — everything else is for him or unisex.</p>
+        <div id="lib-grid" class="lib-grid"></div>
+      </div>
+    </section>
+
+    <!-- Order callout -->
+    <section class="section-pad" style="padding-top:0">
+      <div class="wrap split">
+        <div>
+          <span class="eyebrow" data-reveal>Not sure where to start?</span>
+          <h2 data-reveal data-delay="1" style="margin:1.1rem 0 1.3rem">We'll find it <em>for you.</em></h2>
+          <p class="lead" data-reveal data-delay="2">With over 120 fragrances it's easy to feel spoilt for choice. Just tell us what you love — fresh, floral, oud, or something in between — and we'll point you straight to your match.</p>
+          <div style="margin-top:2rem" data-reveal data-delay="3">
+            <a href="https://api.whatsapp.com/send/?phone=919619733733&text=Hi%20!%20I%27m%20looking%20to%20order%20a%20new%20perfume.&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-gold">Ask us on WhatsApp <span class="arw">→</span></a>
+          </div>
+        </div>
+        <div class="art-panel" data-reveal><div class="glow"></div><div class="flask">🧴</div></div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap" style="position:relative;z-index:1">
+        <h2 class="display" data-reveal style="margin-bottom:1.6rem">Find your <span class="gold-text">signature.</span></h2>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap" data-reveal data-delay="1">
+          <a href="https://api.whatsapp.com/send/?phone=919619733733&text=Hi%20!%20I%27m%20looking%20to%20order%20a%20new%20perfume.&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-gold">Order Now</a>
+          <a href="https://api.whatsapp.com/send/?phone=919619733733&text=Hi!%20I'd%20love%20to%20find%20my%20perfect%20perfume.%20Could%20you%20help%20me%20choose%20the%20right%20fragrance%3F%20%F0%9F%8C%B8&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-ghost">Order on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a class="brand" href="index.html"><img src="assets/img/tpt-mark.png" alt="The Perfume Tailor logo" onerror="this.style.display='none'" /><span class="brand-name">The Perfume Tailor</span></a>
+          <p class="about-blurb">Luxury fragrances, tailored to your taste. The world's most iconic scents, reimagined as Pure Parfum at 40% oil concentration — in 30ml and 120ml.</p>
+        </div>
+        <div class="footer-col"><h4>Explore</h4><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h4>Visit</h4><a href="https://api.whatsapp.com/send/?phone=919619733733&text=Hi%20!%20I%27m%20looking%20to%20order%20a%20new%20perfume.&type=phone_number&app_absent=0" target="_blank" rel="noopener">Order Now</a><a href="tel:+919619733733">96197 33733</a><p>Mon – Sat · 11am – 7pm</p></div>
+        <div class="footer-col"><h4>Follow</h4><a href="https://www.instagram.com/theperfumetailor/" target="_blank" rel="noopener">Instagram</a><a href="https://api.whatsapp.com/send/?phone=919619733733&text=Hi!%20I'd%20love%20to%20find%20my%20perfect%20perfume.%20Could%20you%20help%20me%20choose%20the%20right%20fragrance%3F%20%F0%9F%8C%B8&type=phone_number&app_absent=0" target="_blank" rel="noopener">WhatsApp</a></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> The Perfume Tailor. All rights reserved.</span>
+        <div class="socials"><a href="https://www.instagram.com/theperfumetailor/" target="_blank" rel="noopener">Instagram</a><a href="mailto:hello@theperfumetailor.com">Email</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/collection.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/wa-float.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "The Perfume Tailor",
+  "short_name": "Perfume Tailor",
+  "description": "Luxury fragrances, tailored to your taste.",
+  "icons": [
+    { "src": "assets/img/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "assets/img/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#0a1120",
+  "background_color": "#0a1120",
+  "display": "standalone"
+}
