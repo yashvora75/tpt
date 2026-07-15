@@ -155,6 +155,9 @@ strong { font-weight: 500; color: var(--gold-lite); }
 .nav-links a:hover, .nav-links a.active { color: var(--gold); }
 .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
 .nav-cta { display: inline-flex; }
+/* The overlay "Order Now" pill is only for the mobile slide-in menu — the
+   .nav-cta gold button already covers desktop, so hide this by default. */
+.nav-overlay-cta { display: none; }
 .nav-toggle {
   display: none; flex-direction: column; justify-content: center; gap: 5px;
   width: 36px; height: 36px; padding: 6px; flex-shrink: 0;
@@ -205,8 +208,9 @@ strong { font-weight: 500; color: var(--gold-lite); }
   .nav-links a:first-child { border-top: 1px solid rgba(230,189,131,0.08); }
   .nav-links a:hover, .nav-links a.active { color: var(--gold); background: rgba(230,189,131,0.04); }
 
-  /* CTA inside the overlay */
+  /* CTA inside the overlay — this is the only place it should show */
   .nav-links .nav-overlay-cta {
+    display: inline-flex; align-items: center; justify-content: center;
     margin-top: 2.2rem; padding: 1em 2.4em;
     font-size: 0.76rem; letter-spacing: 0.22em;
     border-radius: 100px; text-align: center;
