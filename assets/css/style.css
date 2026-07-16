@@ -815,22 +815,22 @@ strong { font-weight: 500; color: var(--gold-lite); }
 /* Circular social icon buttons — gold outline, fills gold on hover */
 .social-ic {
   display: flex; align-items: center; justify-content: center;
-  width: 40px; height: 40px; flex: none;
-  border: 1px solid rgba(230, 189, 131, 0.45); border-radius: 50%;
+  width: 44px; height: 44px; flex: none;
+  border: 1.5px solid var(--gold); border-radius: 50%;
   color: var(--gold);
-  background: rgba(230,189,131,0.06);
+  background: rgba(230,189,131,0.08);
   transition: transform .4s var(--ease), border-color .4s, background .4s var(--ease), color .4s, box-shadow .4s;
 }
-.social-ic svg { display: block; width: 18px; height: 18px; overflow: visible; }
-.social-ic[aria-label="Facebook"] svg { width: 16px; height: 16px; }
-.social-ic[aria-label="X (Twitter)"] svg { width: 15px; height: 15px; }
-.social-ic[aria-label="WhatsApp"] svg { width: 18px; height: 18px; }
+.social-ic svg { display: block; width: 20px; height: 20px; overflow: visible; }
+.social-ic[aria-label="Facebook"] svg { width: 18px; height: 18px; }
+.social-ic[aria-label="X (Twitter)"] svg { width: 17px; height: 17px; }
+.social-ic[aria-label="WhatsApp"] svg { width: 20px; height: 20px; }
 .social-ic:hover {
   transform: translateY(-2px);
   border-color: var(--gold);
   background: var(--grad-gold);
   color: var(--ink);
-  box-shadow: 0 10px 24px rgba(230,189,131,0.12);
+  box-shadow: 0 10px 24px rgba(230,189,131,0.18);
 }
 
 /* ==========================================================================
