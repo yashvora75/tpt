@@ -810,27 +810,32 @@ strong { font-weight: 500; color: var(--gold-lite); }
 .footer-bottom .socials { display: flex; gap: 0.8rem; }
 
 /* Social icons in a 2×2 grid inside the "Follow" footer column */
-.footer-socials { display: grid; grid-template-columns: repeat(2, max-content); gap: 0.72rem 0.8rem; }
+.footer-socials { display: grid; grid-template-columns: repeat(2, 44px); gap: 0.8rem; }
 
-/* Circular social icon buttons — gold outline, fills gold on hover */
-.social-ic {
-  display: flex; align-items: center; justify-content: center;
-  width: 44px; height: 44px; flex: none;
+/* Circular social icon buttons — gold outline, fills gold on hover.
+   Selector is scoped to .footer-socials so it beats `.footer-col a` on
+   specificity (that rule sets display:block and would kill the centering). */
+.footer-socials .social-ic {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; margin: 0; padding: 0;
   border: 1.5px solid var(--gold); border-radius: 50%;
   color: var(--gold);
   background: rgba(230,189,131,0.08);
+  line-height: 0;
   transition: transform .4s var(--ease), border-color .4s, background .4s var(--ease), color .4s, box-shadow .4s;
 }
-.social-ic svg { display: block; width: 20px; height: 20px; flex-shrink: 0; overflow: hidden; }
-.social-ic[aria-label="Facebook"] svg { width: 18px; height: 18px; }
-.social-ic[aria-label="X (Twitter)"] svg { width: 17px; height: 17px; }
-.social-ic[aria-label="WhatsApp"] svg { width: 20px; height: 20px; }
-.social-ic:hover {
-  transform: translateY(-2px);
+.footer-socials .social-ic svg {
+  display: block; width: 19px; height: 19px;
+  fill: currentColor; stroke: none;
+}
+/* Instagram is drawn as an outline, not a fill */
+.footer-socials .social-ic.is-instagram svg { fill: none; stroke: currentColor; }
+.footer-socials .social-ic:hover {
+  transform: translateY(-3px);
   border-color: var(--gold);
   background: var(--grad-gold);
   color: var(--ink);
-  box-shadow: 0 10px 24px rgba(230,189,131,0.18);
+  box-shadow: 0 10px 24px rgba(230,189,131,0.22);
 }
 
 /* ==========================================================================
