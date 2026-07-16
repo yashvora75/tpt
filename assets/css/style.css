@@ -821,7 +821,7 @@ strong { font-weight: 500; color: var(--gold-lite); }
   background: rgba(230,189,131,0.08);
   transition: transform .4s var(--ease), border-color .4s, background .4s var(--ease), color .4s, box-shadow .4s;
 }
-.social-ic svg { display: block; width: 20px; height: 20px; overflow: visible; }
+.social-ic svg { display: block; width: 20px; height: 20px; flex-shrink: 0; overflow: hidden; }
 .social-ic[aria-label="Facebook"] svg { width: 18px; height: 18px; }
 .social-ic[aria-label="X (Twitter)"] svg { width: 17px; height: 17px; }
 .social-ic[aria-label="WhatsApp"] svg { width: 20px; height: 20px; }
